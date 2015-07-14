@@ -1,0 +1,20 @@
+%%%-------------------------------------------------------------------
+%%% @author mateuszkorszun
+%%% @copyright (C) 2015, LShift
+%%% @doc
+%%%
+%%% @end
+%%% Created : 06. Jul 2015 2:17 PM
+%%%-------------------------------------------------------------------
+{application, rabbitmq_auth_sasl, [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+    kernel,
+    stdlib
+  ]},
+  {modules, []},
+  {mod, {rabbitmq_auth_sasl_app, []}},
+  {env,[{name_from,distinguished_name}, {token_validation_service, [{url, "http://tvs.cloudcontrolled.com/"}]}]}
+]}.
