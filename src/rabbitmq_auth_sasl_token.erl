@@ -93,6 +93,14 @@ build_user_with_empty_permissions_test() ->
   ?assertEqual([a, b], R),
   ?assertEqual([], P).
 
+build_user_with_empty_roles_test() ->
+  RawBody = "{\"username\":\"Guest\",\"roles\":[],\"permissions\":{\"\\/\":{\"p1\":\".*\",\"p2\":\".*\"}}}",
+  #external_user{username = U, roles = R, permissions = P} = build_user(RawBody),
+
+  ?assertEqual(<<"Guest">>, U),
+  ?assertEqual([], R),
+  ?assertEqual([{<<"/">>, [{p1, <<".*">>}, {p2, <<".*">>}]}], P).
+
 %%%===================================================================
 %%%===================================================================
 %%%===================================================================
