@@ -71,6 +71,6 @@ $ curl -H "Content-Type: application/json" -X POST -d '{"token": "Token", "cert"
 {"username":"Guest","roles":["administrator"],"permissions":{"\/":{"configure":".*","write":".*","read":".*"}}}
 ~~~
 
-## Testing
+## Development & Testing
 
-Check steps you need to start testing [here](README-tests.md).
+Check steps you need to start developing and testing [here](README-tests.md).

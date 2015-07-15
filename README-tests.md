@@ -1,7 +1,16 @@
-Testing
-=======
+Development & Testing
+=====================
 
 You should be testing under [umbrella](https://github.com/rabbitmq/rabbitmq-public-umbrella) environment.
+To prepare working environment execute below steps:
+
+~~~bash
+git clone git@github.com:rabbitmq/rabbitmq-public-umbrella.git;
+cd rabbitmq-public-umbrella; make up;
+
+git clone git@github.com:lshift-de/rabbitmq-auth-sasl.git;
+cd rabbitmq-auth-sasl; make test;
+~~~
 
 #### Generate client / server keys and certs
 
@@ -45,7 +54,7 @@ make run-in-broker;
 
 #### Configure client and connect to server:
 
-Start shell with loaded erlang rabbitmq code:
+Start shell with loaded erlang rabbitmq client code:
 
 ~~~bash
 cd rabbitmq-public-umbrella/rabbitmq-erlang-client; make;
